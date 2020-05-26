@@ -5,7 +5,7 @@
     <hr style="border: 1px solid white;">
 
     <!-- Form to add content to database -->
-    <form class="form-group" method="post" action="site/connection.php">
+    <form class="form-group" method="post" action="connection.php">
 
     <label>Item Number</label><br>
     <input type="text" class="form-control" name="item_no" placeholder="SCP-####" required>
