@@ -9,7 +9,7 @@
   </head>
   <body class="container" style="background-color:#333; color:white;">
   <?php include "connection.php"; ?>
-    <br><h1 class="text-danger">SCP Foundation</h1>
+    <br><h1 class="text-danger"><a href="index.php">SCP Foundation</a></h1>
     <h3 class="text-danger">Secure, Contain, Protect</h3>
 
     <!-- Site menu -->

@@ -1,4 +1,4 @@
-<?php include "templates/header.php"; ?>
+<?php include "templates/form_header.php"; ?>
 
     <h1>ADD NEW SCP RECORD</h1>
     <h3>Use the following fields to enter information of a new SCP to the database.<br>Use \n to separate paragraphs.</h3>
