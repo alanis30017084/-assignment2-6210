@@ -1,6 +1,6 @@
 <?php include "templates/header.php"; ?>
     <!-- Database content -->
-    <div>
+    <div class='container'><br>
       <?php
         if(isset($_GET['subjects']))
         {
@@ -30,26 +30,36 @@
 
           // Added update & delete buttons after SCP entry
           echo "
-            <h3><b>Item #:</b> {$item_no}</h3>
-            <h3><b>Object Class:</b> {$class}</h3>
-            <p><img src='{$img}'</p>
-            <h3>Special Containment Procedures:</h3> <p>{$procedures}</p>
-            <h3>Descriptions:</h3> <p>{$descriptions}</p>
-            <hr style='border: 1px solid white;'><br>
-            <p>{$extra_1}</p>
-            <p>{$extra_2}</p>
-            <p>{$appendix}</p>
-            
-            <p>
-            <a href='{$update}' class='btn btn-warning'>Update</a>
-            <a href='{$delete}' class='btn btn-danger'>Delete</a>
+
+            <div class='card'>
+              <img class='card-img-top' src='{$img}'>
+              <div class='card-body'>
+              <h5 class='card-title'>Item #: {$item_no}</h5>
+              <h6 class='card-subtitle mb-2 text-muted'>Object Class: {$class}</h6>
+              <br>
+              <p class='card-text'><b>Special Containment Procedures:</b><br> {$procedures}</p>
+              <p class='card-text'><b>Description:</b><br> {$descriptions}</p>
+              <hr>
+              <p class='card-text'>
+                <p>{$extra_1}</p>
+                <p>{$extra_2}</p>
+                <p>{$appendix}</p>
+              </p>           
+              <a href='{$update}' class='card-link btn btn-outline-success' type='button'>Update</a>
+              <a href='{$delete}' class='card-link btn btn-outline-danger' type='button'>Delete</a>
+              </div>
+            </div><br>
           ";
         }
         else
         {
           echo "
-            <h1>WARNING: ACCESS TO THIS DATABASE IS FOR AUTHORIZED PERSONNEL ONLY.</h1>
-            <p>To continue, select an SCP to view or create a new entry.</p>
+          <div class='card'>
+            <div class='card-body'>
+              <h1>WARNING: ACCESS TO THIS DATABASE IS FOR AUTHORIZED PERSONNEL ONLY.</h1>
+              <h3>To continue, select an SCP to view or create a new entry.</h3>
+            </div>
+          </div><br><br><br><br><br><br><br><br><br><br><br>
           ";
         }
 

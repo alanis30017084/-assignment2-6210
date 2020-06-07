@@ -1,8 +1,8 @@
-<hr width="100%">
-    <footer class="footer mt-auto">
-    <div class="container bg-dark rounded py-3">
-        <span class="text-white">© 2020 Copyright COMP.6210 Assignment 2</span>
-    </div>
+    <br>
+    <footer class="footer font-small bg-dark">
+      <div class="footer-copyright text-center py-3 text-secondary">© 2020 Copyright:
+        <span class="text-light">Alanis Correa Kriener</span>
+      </div>
     </footer>
     
     <!-- Optional JavaScript -->

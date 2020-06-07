@@ -7,27 +7,29 @@
 
     <title>SCP Foundation</title>
   </head>
-  <body class="container" style="background-color:#333; color:white;">
+  <body class="bg-secondary">
   <?php include "connection.php"; ?>
-    <br><h1 class="text-danger"><a href="index.php">SCP Foundation</a></h1>
-    <h3 class="text-danger">Secure, Contain, Protect</h3>
 
     <!-- Site menu -->
-    <div>
-      <ul class="nav navbar-expand-lg justify-content-between navbar-light bg-light"  style="color:white;">
-          
-        <?php foreach($result as $item): ?>
-          <li class="nav-item">
-            <a href="index.php?subjects='<?php echo $item['item_no']; ?>'" class="nav-link" style="color:black">
-            <?php echo $item['item_no']; ?>
-            </a>
-          </li>
-        <?php endforeach; ?>
 
-        <li class="nav-item">
-          <a href="forms/form.php" class="nav-link btn-danger">ADD SCP</a>
-        </li>
-      </ul>
-    </div>
-    <hr style="border: 1px solid white;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+        <a class="navbar-brand text-success" href="index.php">SCP FOUNDATION<br>Secure, Contain, Protect</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <?php foreach($result as $item): ?>
+            <li class="nav-item">
+              <a href="index.php?subjects='<?php echo $item['item_no']; ?>'" class="nav-link">
+              <?php echo $item['item_no']; ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+
+      <a href="forms/form.php" class="btn btn-outline-success my-2 my-sm-0" type="button">ADD SCP</a>
+      </div>
+    </nav>
     
