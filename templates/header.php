@@ -25,7 +25,7 @@
         <?php endforeach; ?>
 
         <li class="nav-item">
-          <a href="form.php" class="nav-link btn-danger">ADD SCP</a>
+          <a href="forms/form.php" class="nav-link btn-danger">ADD SCP</a>
         </li>
       </ul>
     </div>

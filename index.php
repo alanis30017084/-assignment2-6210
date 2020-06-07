@@ -19,8 +19,8 @@
 
           // Added update & delete variables
           $id = $row['item_no'];
-          $update = "update.php?update=" . $id;
-          $delete = "connection.php?delete=" . $id;
+          $update = "forms/update.php?update=" . $id;
+          $delete = "forms/processing.php?delete=" . $id;
 
           $procedures = str_replace('\n', '<br><br>', $procedures);
           $descriptions = str_replace('\n', '<br><br>', $descriptions);

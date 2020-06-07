@@ -1,20 +1,22 @@
-<?php include "templates/form_header.php"; ?>
+<?php include "../templates/form_header.php"; ?>
 
     <!-- Form to add content to database -->
 
     <?php
 
-        include "connection.php";
+        include "processing.php";
         $item_no = trim($_GET['update'], "'");
         $record = $connection->query("select * from subjects where item_no='$item_no'") or die($connection->error());
         $row = $record->fetch_assoc();
     
     ?>
+
+    <p><a href='../index.php'>Back to index</a></p>
     <h1>UPDATE RECORD <?php echo $row['item_no'];?></h1>
     <h3>Use the following fields to update information of an SCP entry.<br>Use \n to separate paragraphs.</h3>
     <hr style="border: 1px solid white;">
 
-    <form class="form-group" method="post" action="connection.php">
+    <form class="form-group" method="post" action="processing.php">
     <input type="hidden" name="item_no" value="<?php echo $row['item_no']; ?>">
 
     <label>Class</label><br>
@@ -41,4 +43,4 @@
     <input type="submit" class="btn btn-warning" name="update" value="Update SCP entry">
     </form>
     
-    <?php include 'templates/footer.php'; ?>
+    <?php include '../templates/footer.php'; ?>
