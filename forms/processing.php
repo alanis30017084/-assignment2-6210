@@ -21,17 +21,29 @@ if(isset($_POST['submit']))
         if($connection->query($sql) === TRUE)
         {
             include '../templates/form_header.php';
-            echo "<h2>SCP Added</h2>
-            <p><a href='../index.php'>Back to index</a></p>";
-            include '../templates/footer.php';
+            echo "
+                <div class='container'><br>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h2>Success! The new entry has been added to the database and will be displayed in the navigation.</h2>
+                        </div>
+                    </div>
+                </div>
+            ";
         }
         else
         {
             include '../templates/form_header.php';
-            echo "<h2>Error submitting data</h2>
-            <p>{$connection->error}</p>
-            <p><a href='form.php'>Back to form</a></p>";
-            include '../templates/footer.php';
+            echo "
+                <div class='container'><br>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h2>There was an error submitting the data.</h2>
+                            <p>{$connection->error}</p>
+                        </div>
+                    </div>
+                </div>
+            ";
         }
     }
 
@@ -44,15 +56,28 @@ if(isset($_POST['submit']))
         if($connection->query($del) === TRUE)
         {
             include '../templates/form_header.php';
-            echo "<p>Record deleted successfully. <a href='../index.php'>Return to main page</a></p>";
-            include '../templates/footer.php';
+            echo "
+                <div class='container'><br>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h2>Success! The entry has been deleted.</h2>
+                        </div>
+                    </div>
+                </div>
+            ";
         }
         else{
             include '../templates/form_header.php';
-            echo "<p>There was an error deleting this record.</p>
-            <p>{$connection->error}></p>
-            <p><a href='../index.php'>Return to main page</a></p>";
-            include '../templates/footer.php';
+            echo "
+                <div class='container'><br>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h2>There was an error deleting this record.</h2>
+                            <p>{$connection->error}></p>
+                        </div>
+                    </div>
+                </div>
+            ";
         }
     }
 
@@ -78,17 +103,29 @@ if(isset($_POST['submit']))
         if($connection->query($upd) === TRUE)
         {
             include '../templates/form_header.php';
-            echo "<h2>SCP Updated</h2>
-            <p><a href='../index.php'>Back to index</a></p>";
-            include '../templates/footer.php';
+            echo "
+                <div class='container'><br>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h2>Success! The entry has been updated.</h2>
+                        </div>
+                    </div>
+                </div>
+            ";
         }
         else
         {
             include '../templates/form_header.php';
-            echo "<h2>Error updating data</h2>
-            <p>{$connection->error}</p>
-            <p><a href='../index.php'>Back to main</a></p>";
-            include '../templates/footer.php';
+            echo "
+                <div class='container'><br>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h2>There was an error updating this record.</h2>
+                            <p>{$connection->error}></p>
+                        </div>
+                    </div>
+                </div>
+            ";
         }
     }
 

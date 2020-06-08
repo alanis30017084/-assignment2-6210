@@ -7,4 +7,10 @@
 
     <title>SCP Foundation</title>
   </head>
-  <body class="container" style="background-color:#333; color:white;">
+  <body class="bg-secondary">
+
+    <!-- Site menu -->
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand btn btn-outline-success my-2 my-sm-0" type="button" href="../index.php">Return to index</a> 
+    </nav>

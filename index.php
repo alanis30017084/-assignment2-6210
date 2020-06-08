@@ -56,10 +56,15 @@
           echo "
           <div class='card'>
             <div class='card-body'>
-              <h1>WARNING: ACCESS TO THIS DATABASE IS FOR AUTHORIZED PERSONNEL ONLY.</h1>
-              <h3>To continue, select an SCP to view or create a new entry.</h3>
+              <h1>WARNING: ACCESS TO THIS DATABASE IS FOR AUTHORIZED PERSONNEL ONLY.</h1><br>
+              <h3>To continue, select an SCP to view or create a new entry.</h3><br>
+              <p>
+                A new SCP entry may be added using the 'ADD SCP' button.<br>
+                An entry can be updated or deleted by navigating to the entry and clicking the 'UPDATE' or 'DELETE' buttons.<br>
+                These functions may only be accessed by authorized members with the correct username and password.
+              </p>
             </div>
-          </div><br><br><br><br><br><br><br><br><br><br><br>
+          </div><br><br><br><br><br>
           ";
         }
 
